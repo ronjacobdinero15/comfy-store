@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .outlineStyle {
+    @apply focus:outline-none focus:ring focus:ring-violet-300 focus:ring-opacity-50;
+  }
+}
+
+svg.star-svg {
+  display: inline;
+}
