@@ -25,7 +25,7 @@ function TopProducts() {
       <section className="mt-5 grid grid-cols-2 gap-10 md:gap-20 md:gap-y-14 lg:grid-cols-4 lg:pt-5 xl:gap-5">
         {topProducts.map((item) => (
           <Link
-            to={`/fake-store-api-new/products/${item.id}`}
+            to={`/comfy-store/products/${item.id}`}
             className="outlineStyle focus:rounded-sm lg:flex lg:flex-col lg:items-center"
             key={item.id}
           >

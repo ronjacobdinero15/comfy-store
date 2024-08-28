@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function CartLink() {
   return (
     <Link
-      to="/fake-store-api-new/cart"
+      to="/comfy-store/cart"
       className="outlineStyle relative p-2 transition-all duration-300 focus:rounded-full sm:block"
     >
       <img className="w-7" src="./cart.svg" alt="cart_icon" />

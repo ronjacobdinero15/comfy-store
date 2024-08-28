@@ -38,7 +38,7 @@ function Header() {
 
             {/* STORE */}
             <Link
-              to="/fake-store-api-new/products"
+              to="/comfy-store/products"
               className="outlineStyle rounded-full p-1"
             >
               <img className="w-10" src="./store.svg" alt="store_icon" />

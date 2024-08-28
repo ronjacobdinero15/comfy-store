@@ -9,26 +9,26 @@ import Products from "./pages/Products";
 
 const router = createBrowserRouter([
   {
-    path: "/fake-store-api-new/",
+    path: "/comfy-store/",
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/fake-store-api-new/",
+        path: "/comfy-store/",
         element: <Home />,
         errorElement: <Error />,
       },
       {
-        path: "/fake-store-api-new/products",
+        path: "/comfy-store/products",
         element: <Products />,
         errorElement: <Error />,
       },
       {
-        path: "/fake-store-api-new/products/:productId",
+        path: "/comfy-store/products/:productId",
         element: <Product />,
       },
       {
-        path: "/fake-store-api-new/cart",
+        path: "/comfy-store/cart",
         element: <Cart />,
       },
     ],
