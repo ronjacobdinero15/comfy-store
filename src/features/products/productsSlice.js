@@ -2,6 +2,7 @@ import { createSelector } from "reselect";
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+import { binarySearch } from "../../utils/helpers";
 import { getProducts } from "../../services/apiProducts";
 
 const initialState = {
@@ -45,5 +46,20 @@ export const getTopProducts = createSelector(
     return [...products]
       .sort((a, b) => b.rating.rate - a.rating.rate)
       .slice(0, 4);
+  },
+);
+
+export const getSelectedProduct = (id) => (state) => {
+  const products = state.product.products;
+  return binarySearch(products, id);
+};
+
+export const getCategories = createSelector(
+  (state) => state.product.products,
+  (products) => {
+    const uniqueCategories = Array.from(
+      new Set(products.map((product) => product.category)),
+    );
+    return uniqueCategories;
   },
 );

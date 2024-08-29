@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Error from "./ui/Error";
-import AppLayout from "./ui/AppLayout";
+import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import Product from "./pages/Product";
+import AppLayout from "./ui/AppLayout";
 import Products from "./pages/Products";
+import SelectedProduct from "./pages/SelectedProduct";
 
 const router = createBrowserRouter([
   {
@@ -25,11 +25,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/comfy-store/products/:productId",
-        element: <Product />,
+        element: <SelectedProduct />,
       },
       {
         path: "/comfy-store/cart",
         element: <Cart />,
+      },
+      {
+        path: "/comfy-store/products/category/:categoryType",
+        element: <Products />,
+        errorElement: <Error />,
       },
     ],
   },

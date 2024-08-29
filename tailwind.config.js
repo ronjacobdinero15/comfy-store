@@ -5,6 +5,9 @@ export default {
     fontFamily: {
       sans: "Open Sans, sans-serif",
     },
+    container: {
+      padding: "2rem",
+    },
     extend: {
       colors: {
         base: "#cacdfa",

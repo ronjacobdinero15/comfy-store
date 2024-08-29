@@ -20,9 +20,9 @@ function Home() {
           alt=""
           className="absolute h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-violet-400/30"></div>
+        {/* <div className="absolute inset-0 bg-violet-400/30"></div> */}
         {/* CONTENTS */}
-        <div className="relative z-20 flex h-full flex-col items-center justify-center uppercase tracking-wide text-stone-100">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center uppercase tracking-wide text-stone-100">
           <p className="text-xl font-semibold sm:text-2xl">
             It&apos;s finally here...
           </p>
