@@ -60,6 +60,7 @@ export const getSearchedProduct = (item) => (state) => {
   const searchedProduct = state.product.products.filter(
     (product) => product.title.toLowerCase() === item,
   );
+  return searchedProduct;
 };
 
 export const getCategories = createSelector(

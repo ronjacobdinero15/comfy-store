@@ -56,21 +56,19 @@ function Products() {
           <div className="flex items-center gap-2 text-sm sm:gap-5">
             <span>Sort by: </span>
             <select
-              className="outlineStyle rounded-md border-2 border-stone-300"
+              className="outlineStyle rounded-full border-2 border-stone-300 px-2 py-2"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
               <option value="default">Default</option>
-              <option className="hover:bg-red-500" value="ascending">
-                Prices low to high
-              </option>
+              <option value="ascending">Prices low to high</option>
               <option value="descending">Prices high to low</option>
             </select>
           </div>
         </header>
         {/* PRODUCTS */}
         <main
-          className={`${sortedProducts.length > 0 ? "container grid grid-cols-2 gap-5 py-10 sm:grid-cols-3 md:gap-y-10 lg:grid-cols-4 xl:grid-cols-5 xl:gap-5" : "flex min-h-screen items-center justify-center"}`}
+          className={`${sortedProducts.length > 0 ? "container grid grid-cols-2 gap-x-5 px-5 py-10 sm:grid-cols-3 md:gap-y-10 lg:grid-cols-4 xl:grid-cols-5" : "flex min-h-screen items-center justify-center"}`}
         >
           {sortedProducts.length > 0 ? (
             sortedProducts.map((item) => (

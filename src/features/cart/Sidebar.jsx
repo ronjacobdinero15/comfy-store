@@ -43,12 +43,12 @@ function Sidebar() {
       >
         <div className="grid h-full grid-rows-[auto_1fr_auto]">
           <div className="flex items-center justify-between border-b pb-2">
-            <div className="text-lg font-semibold uppercase">
+            <div className="font-semibold uppercase sm:text-lg">
               Your cart {itemsInCart && `(${cartQuantity})`}
             </div>
             {itemsInCart && (
               <button
-                className="box-border w-24 rounded-md border-[2px] px-3 py-[2px] text-center text-sm text-stone-700 transition hover:bg-stone-100 active:border-none active:bg-red-500 active:text-stone-100"
+                className="box-border w-24 rounded-md border-[2px] px-3 py-[2px] text-center text-xs text-stone-700 transition hover:bg-stone-100 active:border-none active:bg-red-500 active:text-stone-100 sm:text-sm"
                 onClick={() => dispatch(clearCart())}
               >
                 Clear Cart
@@ -68,12 +68,12 @@ function Sidebar() {
 
           {itemsInCart && (
             <div className="border-t pt-2">
-              <div className="py-4 font-semibold uppercase tracking-wide">
+              <div className="py-4 text-sm font-semibold uppercase tracking-wide sm:text-base">
                 Subtotal: ${cartPriceTotal}
               </div>
               <div className="flex flex-col gap-2 text-lg tracking-wide">
                 <button
-                  className="bg-stone-200 py-2"
+                  className="bg-stone-200 py-2 text-sm sm:text-base"
                   onClick={() => {
                     navigate("/comfy-store/cart");
                     dispatch(toggleSidebar());
@@ -81,7 +81,7 @@ function Sidebar() {
                 >
                   View Cart
                 </button>
-                <button className="bg-stone-700 py-2 text-stone-200">
+                <button className="bg-stone-700 py-2 text-sm text-stone-200 sm:text-base">
                   Checkout
                 </button>
               </div>

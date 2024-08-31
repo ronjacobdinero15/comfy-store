@@ -26,13 +26,13 @@ function Home() {
         <div className="absolute inset-0 bg-violet-400/30"></div>
         {/* CONTENTS */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center uppercase tracking-wide text-stone-100">
-          <p className="text-xl font-semibold sm:text-2xl">
+          <p className="text-2xl font-semibold sm:text-2xl">
             It&apos;s finally here...
           </p>
-          <p className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
+          <p className="text-5xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
             Massive sale
           </p>
-          <p className="text-xl font-semibold sm:text-2xl">Up to 70% off</p>
+          <p className="text-2xl font-semibold sm:text-2xl">Up to 70% off</p>
           <div className="mt-8 flex flex-col gap-4 text-center sm:flex-row">
             <Link
               to="/comfy-store/products/category/men's-clothing"

@@ -10,7 +10,6 @@ export default {
     },
     extend: {
       colors: {
-        base: "#cacdfa",
         secondary: "#303e41",
       },
     },
