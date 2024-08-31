@@ -27,7 +27,7 @@ function Product({ item, type }) {
 
       <div className="flex h-40 flex-col justify-between lg:text-center">
         <div>
-          <p className="pt-3 text-xs uppercase text-stone-400 xl:text-sm">
+          <p className="line-clamp-1 pt-3 text-xs uppercase text-stone-400 xl:text-sm">
             {item.category}
           </p>
           <h1 className="whitespace-wrap line-clamp-2 max-w-72 overflow-hidden text-ellipsis transition-all sm:group-hover:font-semibold sm:group-hover:underline lg:group-hover:scale-110">
@@ -50,12 +50,13 @@ function Product({ item, type }) {
           <div className="relative flex items-center justify-between lg:justify-center">
             <div className="flex flex-col text-sm">
               <ProductRating rate={item.rating.rate} />
-              <span className="flex items-center gap-1 pl-1 pt-[5px] text-stone-500 lg:justify-center">
+              <div className="flex items-center gap-1 pl-1 pt-[5px] text-stone-500 lg:justify-center">
                 {item.rating.rate}
-                <span className="transition-all hover:underline">
+                <span className="hidden transition-all hover:underline sm:block">
                   ({item.rating.count} ratings)
                 </span>
-              </span>
+                <span className="sm:hidden">({item.rating.count})</span>
+              </div>
             </div>
 
             <div className="flex items-center justify-center rounded-sm bg-yellow-400 lg:hidden">

@@ -10,7 +10,7 @@ import customer_service from "/customer_service.svg";
 function Footer() {
   return (
     <div className="bg-stone-700">
-      <footer className="container mx-auto divide-y divide-stone-200 px-10 py-7 text-stone-200">
+      <footer className="divide-y divide-stone-200 px-5 py-7 text-stone-200 sm:container sm:mx-auto sm:px-10">
         <section className="grid space-y-8 pb-7 md:grid-cols-3 md:space-x-8 md:space-y-0">
           <div className="relative flex-1 space-y-4">
             <p className="text-lg transition-colors hover:text-stone-100">
@@ -78,7 +78,7 @@ function Footer() {
           </div>
         </section>
 
-        <section className="flex items-center justify-center gap-2 pt-7 sm:justify-normal">
+        <section className="flex items-center justify-center gap-2 pt-5 sm:justify-normal sm:pt-7">
           <span className="text-lg">&copy;</span>
           <span className="text-sm">2024 Comfy. All Rights Reserved.</span>
         </section>

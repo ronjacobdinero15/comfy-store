@@ -17,7 +17,7 @@ function Header() {
   const categories = useSelector(getCategories);
 
   return (
-    <header className="container mx-auto flex !h-28 flex-col gap-3 bg-white/50 px-5 py-5 sm:px-10">
+    <header className="flex !h-28 flex-col gap-3 bg-white/50 px-4 py-5 sm:container sm:mx-auto sm:px-5">
       <div className="flex items-center justify-between">
         {showSearch ? (
           <>
@@ -56,9 +56,9 @@ function Header() {
       </div>
 
       <nav
-        className={`container mx-auto px-2 md:px-6 ${showSearch ? "pt-2" : ""}`}
+        className={`px-2 sm:container sm:mx-auto md:px-6 ${showSearch ? "pt-2" : ""}`}
       >
-        <ul className="flex items-center justify-between text-center text-xs sm:text-sm">
+        <ul className="flex items-center justify-between text-center text-sm">
           {categories.map((category) => (
             <NavLink
               to={`/comfy-store/products/category/${category.replace(/ /g, "-")}`}
@@ -71,7 +71,10 @@ function Header() {
               }
               key={category}
             >
-              {category.replace(/ "Clothing"/g, "")}
+              {category.replace(/'s clothing$/i, "")}
+              {category.includes("'s clothing") && (
+                <span className="hidden sm:inline">&#39;s clothing</span>
+              )}
             </NavLink>
           ))}
         </ul>

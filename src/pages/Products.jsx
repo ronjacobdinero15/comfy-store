@@ -38,7 +38,7 @@ function Products() {
 
   return (
     <main>
-      <div className="container mx-auto">
+      <div className="sm:container sm:mx-auto">
         {/* HEADER */}
         <header
           className={`${searchProduct ? "justify-between" : "justify-end"} container flex h-16 items-center border-b py-4`}
@@ -53,15 +53,17 @@ function Products() {
             </div>
           )}
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2 text-sm sm:gap-5">
             <span>Sort by: </span>
             <select
-              className="rounded-md border-2 border-stone-300 outline-none"
+              className="outlineStyle rounded-md border-2 border-stone-300"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
               <option value="default">Default</option>
-              <option value="ascending">Prices low to high</option>
+              <option className="hover:bg-red-500" value="ascending">
+                Prices low to high
+              </option>
               <option value="descending">Prices high to low</option>
             </select>
           </div>

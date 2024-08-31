@@ -33,7 +33,7 @@ function Home() {
             Massive sale
           </p>
           <p className="text-xl font-semibold sm:text-2xl">Up to 70% off</p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 text-center sm:flex-row">
             <Link
               to="/comfy-store/products/category/men's-clothing"
               className="outlineStyle rounded-md border px-4 py-2 font-semibold transition-all hover:bg-stone-100/80 hover:text-stone-700 focus:bg-stone-100/80 focus:text-stone-700 sm:px-2 sm:py-1 md:px-4 md:py-2"

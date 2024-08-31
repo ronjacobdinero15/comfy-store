@@ -8,7 +8,7 @@ function TopProducts() {
 
   return (
     <main className="bg-white">
-      <div className="container mx-auto py-10 sm:py-14">
+      <div className="px-4 py-10 sm:container sm:mx-auto sm:py-14">
         <div className="flex items-center">
           <div className="h-[.1px] flex-1 bg-stone-300"></div>
           <span className="w-auto px-3 text-2xl font-bold uppercase tracking-wide">
