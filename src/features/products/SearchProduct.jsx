@@ -1,5 +1,8 @@
 import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
+
+import search from "/search.svg";
 
 function SearchProduct({ showSearch }) {
   const [searchProduct, setSearchProduct] = useState("");
@@ -27,7 +30,7 @@ function SearchProduct({ showSearch }) {
       />
 
       <button className="outlineStyle absolute right-1 top-1 h-8 cursor-pointer rounded-full bg-violet-300 px-5 transition active:bg-violet-400 sm:block">
-        <img className="h-full w-5" src="./search.svg" alt="search_icon" />
+        <img className="h-full w-5" src={search} alt="search_icon" />
       </button>
     </form>
   );

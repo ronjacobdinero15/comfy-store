@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import { decreaseQuantity, deleteItem, increaseQuantity } from "./cartSlice";
 import { applyDiscount } from "../../utils/helpers";
-import { Link } from "react-router-dom";
+import { decreaseQuantity, deleteItem, increaseQuantity } from "./cartSlice";
 
 function CartItem({ item }) {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function CartItem({ item }) {
                 {item.title}
               </p>
               <button
-                className="flex items-center justify-center rounded-full border px-[6px] transition-all duration-300 hover:font-semibold active:border-none active:bg-red-500 active:font-bold active:text-stone-100"
+                className="flex items-center justify-center rounded-full border px-[6px] transition-all hover:text-red-500 active:border-none active:bg-red-500 active:font-bold active:text-stone-100"
                 onClick={() => dispatch(deleteItem(item.id))}
               >
                 ✕

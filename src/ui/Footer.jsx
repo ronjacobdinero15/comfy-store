@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 
+import email from "/email.svg";
+import twitter from "/twitter.svg";
+import facebook from "/facebook.svg";
+import linkedin from "/linkedin.svg";
+import instagram from "/instagram.svg";
+import customer_service from "/customer_service.svg";
+
 function Footer() {
   return (
     <div className="bg-stone-700">
@@ -25,35 +32,19 @@ function Footer() {
 
             <div className="grid grid-cols-2 gap-y-4 text-sm md:grid-cols-1 xl:grid-cols-2">
               <Link className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100">
-                <img
-                  className="h-5 w-5"
-                  src="./facebook.svg"
-                  alt="facebook_icon"
-                />
+                <img className="h-5 w-5" src={facebook} alt="facebook_icon" />
                 <span>Facebook</span>
               </Link>
               <Link className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100">
-                <img
-                  className="h-6 w-6"
-                  src="./instagram.svg"
-                  alt="instagram_icon"
-                />
+                <img className="h-6 w-6" src={instagram} alt="instagram_icon" />
                 <span>Instagram</span>
               </Link>
               <Link className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100">
-                <img
-                  className="h-5 w-5"
-                  src="./twitter.svg"
-                  alt="twitter_icon"
-                />
+                <img className="h-5 w-5" src={twitter} alt="twitter_icon" />
                 <span>Twitter</span>
               </Link>
               <Link className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100">
-                <img
-                  className="h-6 w-6"
-                  src="./linkedin.svg"
-                  alt="linkedin_icon"
-                />
+                <img className="h-6 w-6" src={linkedin} alt="linkedin_icon" />
                 <span>LinkedIn</span>
               </Link>
             </div>
@@ -71,7 +62,7 @@ function Footer() {
               >
                 <img
                   className="h-6 w-6"
-                  src="./customer_service.svg"
+                  src={customer_service}
                   alt="customer_service_icon"
                 />
                 <span>0912-345-6789</span>
@@ -80,7 +71,7 @@ function Footer() {
                 href="mailto:Lorem30@hotmail.com"
                 className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100"
               >
-                <img className="h-7 w-7" src="./email.svg" alt="email_icon" />
+                <img className="h-7 w-7" src={email} alt="email_icon" />
                 <span>Lorem30@hotmail.com</span>
               </a>
             </div>

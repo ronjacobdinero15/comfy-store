@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import flash from "/flash.svg";
+
 import ProductRating from "../../ui/ProductRating";
 import { applyDiscount } from "../../utils/helpers";
 import AddToCartButton from "../cart/AddToCartButton";
@@ -36,7 +38,7 @@ function Product({ item, type }) {
         <div>
           <div className="flex items-center gap-2 bg-violet-500 lg:justify-center lg:bg-transparent">
             <div className="flex items-center font-bold text-yellow-400">
-              <img className="w-4" src="./flash.svg" alt="flash_icon" />
+              <img className="w-4" src={flash} alt="flash_icon" />
               <span className="flex items-end">$</span>
               <span className="text-lg">{applyDiscount(item.price)}</span>
             </div>

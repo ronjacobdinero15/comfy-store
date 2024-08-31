@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
+import forward from "/forward.svg";
 
 import CartItem from "./CartItem";
 import {
@@ -8,7 +11,6 @@ import {
   getTotal,
   toggleSidebar,
 } from "./cartSlice";
-import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const cart = useSelector(getCart);
@@ -91,7 +93,7 @@ function Sidebar() {
           className="absolute -left-4 top-1/2 z-40 flex items-center justify-center rounded-full bg-violet-300 p-1 transition active:bg-violet-400"
           onClick={() => dispatch(toggleSidebar())}
         >
-          <img className="w-6" src="./forward.svg" alt="back_icon" />
+          <img className="w-6" src={forward} alt="back_icon" />
         </button>
       </aside>
     </div>

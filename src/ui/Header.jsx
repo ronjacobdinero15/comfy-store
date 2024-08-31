@@ -1,10 +1,15 @@
 import { useState } from "react";
 
-import SearchProduct from "../features/products/SearchProduct";
+import { useSelector } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
+
+import back from "/back.svg";
+import store from "/store.svg";
+import search from "/search.svg";
+
 import HomeLink from "./HomeLink";
 import CartLink from "../features/cart/CartLink";
-import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import SearchProduct from "../features/products/SearchProduct";
 import { getCategories } from "../features/products/productsSlice";
 
 function Header() {
@@ -12,7 +17,7 @@ function Header() {
   const categories = useSelector(getCategories);
 
   return (
-    <header className="container mx-auto flex !h-28 flex-col gap-3 bg-white/90 px-5 py-5 sm:px-10">
+    <header className="container mx-auto flex !h-28 flex-col gap-3 bg-white/50 px-5 py-5 sm:px-10">
       <div className="flex items-center justify-between">
         {showSearch ? (
           <>
@@ -20,7 +25,7 @@ function Header() {
               onClick={() => setShowSearch(!showSearch)}
               className="outlineStyle rounded-full"
             >
-              <img className="w-7" src="./back.svg" alt="back_icon" />
+              <img className="w-7" src={back} alt="back_icon" />
             </button>
             <SearchProduct showSearch={showSearch} />
           </>
@@ -34,14 +39,14 @@ function Header() {
                 className="outlineStyle rounded-full p-2 sm:hidden"
                 onClick={() => setShowSearch(!showSearch)}
               >
-                <img className="w-7" src="./search.svg" alt="search_icon" />
+                <img className="w-7" src={search} alt="search_icon" />
               </button>
               {/* STORE */}
               <Link
                 to="/comfy-store/products"
                 className="outlineStyle rounded-full p-1"
               >
-                <img className="w-10" src="./store.svg" alt="store_icon" />
+                <img className="w-10" src={store} alt="store_icon" />
               </Link>
 
               <CartLink />
@@ -66,7 +71,7 @@ function Header() {
               }
               key={category}
             >
-              {category}
+              {category.replace(/ "Clothing"/g, "")}
             </NavLink>
           ))}
         </ul>
