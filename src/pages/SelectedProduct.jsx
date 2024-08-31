@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Loader from "../ui/Loader";
 import { getSelectedProduct } from "../features/products/productsSlice";
+
 function SelectedProduct() {
   const { productId } = useParams();
   const selectedProduct = useSelector(getSelectedProduct(parseInt(productId)));

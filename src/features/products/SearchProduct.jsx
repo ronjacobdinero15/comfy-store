@@ -1,12 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SearchProduct({ showSearch }) {
   const [searchProduct, setSearchProduct] = useState("");
+  const navigate = useNavigate();
 
   function handleSearchItem(e) {
     e.preventDefault();
 
-    if (searchProduct === "") return;
+    const trimmedSearchProduct = searchProduct.toLowerCase().trim();
+
+    if (trimmedSearchProduct === "") return;
+    navigate(`/comfy-store/products/search/${trimmedSearchProduct}`);
+    setSearchProduct("");
   }
 
   return (

@@ -49,9 +49,17 @@ export const getTopProducts = createSelector(
   },
 );
 
+export const getAllProducts = (state) => state.product.products;
+
 export const getSelectedProduct = (id) => (state) => {
   const products = state.product.products;
   return binarySearch(products, id);
+};
+
+export const getSearchedProduct = (item) => (state) => {
+  const searchedProduct = state.product.products.filter(
+    (product) => product.title.toLowerCase() === item,
+  );
 };
 
 export const getCategories = createSelector(

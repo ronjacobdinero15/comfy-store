@@ -15,7 +15,7 @@ function CartLink() {
         <img className="w-7" src="./cart.svg" alt="cart_icon" />
 
         {cartQuantity > 0 && (
-          <span className="absolute -right-1 top-0 z-10 flex items-center justify-center rounded-full bg-violet-300 px-1 text-center text-sm font-semibold group-focus:outline-none group-focus:ring-4 group-focus:ring-violet-300 group-focus:ring-opacity-50">
+          <span className="absolute -right-1 top-0 z-10 flex items-center justify-center rounded-full bg-violet-300 px-[6px] text-center text-sm font-semibold group-focus:outline-none group-focus:ring-4 group-focus:ring-violet-300 group-focus:ring-opacity-50">
             {cartQuantity}
           </span>
         )}

@@ -21,20 +21,22 @@ const router = createBrowserRouter([
       {
         path: "/comfy-store/products",
         element: <Products />,
-        errorElement: <Error />,
       },
       {
         path: "/comfy-store/products/:productId",
         element: <SelectedProduct />,
       },
       {
-        path: "/comfy-store/cart",
-        element: <Cart />,
+        path: "/comfy-store/products/search/:searchProduct",
+        element: <Products />,
       },
       {
         path: "/comfy-store/products/category/:categoryType",
         element: <Products />,
-        errorElement: <Error />,
+      },
+      {
+        path: "/comfy-store/cart",
+        element: <Cart />,
       },
     ],
   },

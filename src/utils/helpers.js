@@ -1,5 +1,5 @@
 export function applyDiscount(price) {
-  return (price * 0.7).toFixed(2);
+  return Number((price * 0.7).toFixed(2));
 }
 
 export function binarySearch(array, targetId, idKey = "id") {

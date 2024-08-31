@@ -17,7 +17,7 @@ function Home() {
       <div className="relative h-screen w-full sm:h-dvh">
         <img
           src="./bg_home.jpg"
-          alt=""
+          alt="home_background"
           className="absolute h-full w-full object-cover"
         />
         {/* <div className="absolute inset-0 bg-violet-400/30"></div> */}

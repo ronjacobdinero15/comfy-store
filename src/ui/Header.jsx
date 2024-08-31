@@ -43,6 +43,7 @@ function Header() {
               >
                 <img className="w-10" src="./store.svg" alt="store_icon" />
               </Link>
+
               <CartLink />
             </div>
           </>

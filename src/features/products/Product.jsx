@@ -4,11 +4,11 @@ import ProductRating from "../../ui/ProductRating";
 import { applyDiscount } from "../../utils/helpers";
 import AddToCartButton from "../cart/AddToCartButton";
 
-function Product({ item }) {
+function Product({ item, type }) {
   return (
     <Link
       to={`/comfy-store/products/${item.id}`}
-      className="outlineStyle group box-border py-5 hover:rounded-md focus:rounded-sm sm:hover:border lg:flex lg:flex-col lg:items-center lg:px-5"
+      className="outlineStyle group box-border py-5 hover:rounded-md focus:rounded-sm sm:px-2 sm:hover:border lg:flex lg:flex-col lg:items-center lg:px-5"
     >
       <div className="relative flex justify-center">
         <img
@@ -16,7 +16,9 @@ function Product({ item }) {
           className="aspect-square w-32 object-contain transition-all group-hover:scale-105 md:w-40 lg:w-48"
           alt={item.title}
         />
-        <div className="hidden items-center justify-center rounded-sm bg-yellow-400 lg:absolute lg:-right-10 lg:top-0 lg:flex lg:opacity-0 lg:transition-all lg:group-hover:-right-5 lg:group-hover:opacity-100">
+        <div
+          className={`hidden items-center justify-center rounded-sm bg-yellow-400 lg:absolute lg:-right-5 lg:top-0 lg:flex lg:opacity-0 lg:transition-all lg:group-hover:-right-0 lg:group-hover:opacity-100 ${type === "store" ? "" : "xl:-right-10 xl:top-2 xl:group-hover:-right-5"}`}
+        >
           <AddToCartButton item={item} />
         </div>
       </div>
@@ -26,7 +28,7 @@ function Product({ item }) {
           <p className="pt-3 text-xs uppercase text-stone-400 xl:text-sm">
             {item.category}
           </p>
-          <h1 className="whitespace-wrap line-clamp-2 max-w-72 overflow-hidden text-ellipsis transition-all sm:group-hover:scale-110 sm:group-hover:font-semibold sm:group-hover:underline">
+          <h1 className="whitespace-wrap line-clamp-2 max-w-72 overflow-hidden text-ellipsis transition-all sm:group-hover:font-semibold sm:group-hover:underline lg:group-hover:scale-110">
             {item.title}
           </h1>
         </div>
