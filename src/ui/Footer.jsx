@@ -16,7 +16,7 @@ function Footer() {
             <p className="text-lg transition-colors hover:text-stone-100">
               About
             </p>
-            <span className="absolute top-3 h-[2px] w-6 rounded-full bg-stone-100"></span>
+            <span className="absolute top-[14px] h-[2px] w-6 rounded-full bg-stone-100"></span>
             <p className="text-justify text-sm">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
               perspiciatis id repellendus rem dolorem, repudiandae totam
@@ -28,7 +28,7 @@ function Footer() {
             <p className="text-lg transition-colors hover:text-stone-100">
               Follow us
             </p>
-            <span className="absolute top-3 h-[2px] w-6 rounded-full bg-stone-100"></span>
+            <span className="absolute top-[14px] h-[2px] w-6 rounded-full bg-stone-100"></span>
 
             <div className="grid grid-cols-2 gap-y-4 text-sm md:grid-cols-1 xl:grid-cols-2">
               <Link className="outlineStyle flex items-center gap-2 rounded-md transition-colors hover:text-stone-100">
@@ -53,7 +53,7 @@ function Footer() {
             <p className="text-lg transition-colors duration-150 hover:text-stone-100">
               Contact us
             </p>
-            <span className="absolute top-3 h-[2px] w-6 rounded-full bg-stone-100"></span>
+            <span className="absolute top-[14px] h-[2px] w-6 rounded-full bg-stone-100"></span>
 
             <div className="grid grid-cols-1 space-y-2 text-sm sm:grid-cols-2 sm:space-y-0 md:grid-cols-1 md:space-y-2 xl:grid-cols-2 xl:grid-rows-none xl:space-y-0">
               <a

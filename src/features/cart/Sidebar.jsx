@@ -39,11 +39,11 @@ function Sidebar() {
       <aside
         className={`${
           isOpen ? "right-0" : "-right-full"
-        } fixed top-0 z-30 h-dvh w-full max-w-[80vw] bg-white px-5 py-5 shadow-2xl transition-all duration-300 sm:max-w-[60vw] lg:px-[35px] xl:max-w-[30vw]`}
+        } fixed top-0 z-30 h-dvh w-full max-w-[85vw] bg-white px-5 py-5 shadow-2xl transition-all duration-300 sm:max-w-[60vw] lg:px-[35px] xl:max-w-[30vw]`}
       >
         <div className="grid h-full grid-rows-[auto_1fr_auto]">
           <div className="flex items-center justify-between border-b pb-2">
-            <div className="font-semibold uppercase sm:text-lg">
+            <div className="text-sm font-semibold uppercase sm:text-base md:text-lg">
               Your cart {itemsInCart && `(${cartQuantity})`}
             </div>
             {itemsInCart && (
@@ -56,7 +56,7 @@ function Sidebar() {
             )}
           </div>
 
-          <div className="flex flex-col gap-10 overflow-y-auto py-8">
+          <div className="flex flex-col gap-5 divide-y overflow-y-auto pb-4 sm:gap-10 sm:py-8">
             {itemsInCart ? (
               cart.map((item) => <CartItem item={item} key={item.id} />)
             ) : (
@@ -93,7 +93,7 @@ function Sidebar() {
           className="absolute -left-4 top-1/2 z-40 flex items-center justify-center rounded-full bg-violet-300 p-1 transition active:bg-violet-400"
           onClick={() => dispatch(toggleSidebar())}
         >
-          <img className="w-6" src={forward} alt="back_icon" />
+          <img className="w-[22px] sm:w-6" src={forward} alt="back_icon" />
         </button>
       </aside>
     </div>

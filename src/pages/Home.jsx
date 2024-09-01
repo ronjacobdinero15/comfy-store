@@ -1,19 +1,23 @@
 import { useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import bg_home from "/bg_home.jpg";
 
 import TopProducts from "../features/products/TopProducts.jsx";
-import { fetchProducts } from "../features/products/productsSlice.js";
-import { Link } from "react-router-dom";
+import {
+  fetchProducts,
+  getAllProducts,
+} from "../features/products/productsSlice.js";
 
 function Home() {
   const dispatch = useDispatch();
+  const products = useSelector(getAllProducts);
 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+    if (products.length === 0) dispatch(fetchProducts());
+  }, [products, dispatch]);
 
   return (
     <>

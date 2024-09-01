@@ -9,7 +9,7 @@ function CartItem({ item }) {
 
   return (
     <div>
-      <div className="grid grid-cols-[auto_1fr] gap-5">
+      <div className="grid grid-cols-[auto_1fr] gap-4 pt-4 sm:gap-5">
         <Link to={`/comfy-store/products/${item.id}`}>
           <img
             className="aspect-square w-20 object-contain"
@@ -32,10 +32,10 @@ function CartItem({ item }) {
               </button>
             </div>
 
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full min-w-16 items-center justify-between gap-2">
               <div className="grid grid-cols-3">
                 <button
-                  className="rounded-md rounded-r-none border-[2px] border-r-0 px-3 py-[2px] text-center text-sm font-semibold text-stone-700 transition hover:bg-stone-100 active:bg-stone-200 sm:text-base"
+                  className="rounded-md rounded-r-none border-[2px] border-r-0 px-2 py-[2px] text-center text-sm font-semibold text-stone-700 transition hover:bg-stone-100 active:bg-stone-200 sm:px-3 sm:text-base"
                   onClick={() => dispatch(decreaseQuantity(item.id))}
                 >
                   –
@@ -44,7 +44,7 @@ function CartItem({ item }) {
                   {item.quantity}
                 </span>
                 <button
-                  className="rounded-md rounded-l-none border-[2px] border-l-0 px-3 py-[2px] text-center text-sm font-semibold text-stone-700 transition hover:bg-stone-100 active:bg-stone-200 sm:text-base"
+                  className="rounded-md rounded-l-none border-[2px] border-l-0 px-2 py-[2px] text-center text-sm font-semibold text-stone-700 transition hover:bg-stone-100 active:bg-stone-200 sm:px-3 sm:text-base"
                   onClick={() => dispatch(increaseQuantity(item.id))}
                 >
                   +
