@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { applyDiscount } from "../../utils/helpers";
 
 const initialState = {
@@ -13,20 +14,20 @@ const cartSlice = createSlice({
     toggleSidebar(state) {
       state.isSidebarOpen = !state.isSidebarOpen;
     },
-    // ACCEPTS: ID
+    // ACCEPTS: OBJECT
     addToCart(state, action) {
       const itemInCart = state.cart.find(
         (item) => item.id === action.payload.id,
       );
 
       if (itemInCart) {
-        itemInCart.quantity += 1;
+        itemInCart.quantity += action.payload.quantity;
         itemInCart.totalPrice =
           itemInCart.quantity * applyDiscount(itemInCart.price);
       } else {
         state.cart.push({
           ...action.payload,
-          quantity: 1,
+          quantity: action.payload.quantity,
           totalPrice: applyDiscount(action.payload.price),
         });
       }

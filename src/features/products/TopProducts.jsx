@@ -16,7 +16,7 @@ function TopProducts() {
           </span>
           <div className="h-[.1px] flex-1 bg-stone-300"></div>
         </div>
-        <section className="mt-3 grid grid-cols-2 gap-x-5 md:gap-10 md:gap-y-14 lg:grid-cols-4 xl:gap-5">
+        <section className="mt-3 grid grid-cols-2 gap-x-5 md:gap-x-10 md:gap-y-14 lg:grid-cols-4 xl:gap-5">
           {topProducts.map((item) => (
             <Product item={item} key={item.id} />
           ))}

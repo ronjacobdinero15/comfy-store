@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import cart_light from "/cart_light.svg";
 
-import { addToCart } from "./cartSlice";
+import { addToCart, toggleSidebar } from "./cartSlice";
 
 function AddToCartButton({ item }) {
   const dispatch = useDispatch();
@@ -10,7 +10,14 @@ function AddToCartButton({ item }) {
   function handleAddToCart(e) {
     e.preventDefault();
     e.stopPropagation();
-    dispatch(addToCart(item));
+
+    const newItemObj = {
+      ...item,
+      quantity: 1,
+    };
+
+    dispatch(addToCart(newItemObj));
+    dispatch(toggleSidebar());
   }
 
   return (

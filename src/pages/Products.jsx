@@ -39,6 +39,8 @@ function Products() {
       return a.price - b.price;
     } else if (sortBy === "descending") {
       return b.price - a.price;
+    } else if (sortBy === "rating_descending") {
+      return b.rating.rate - a.rating.rate;
     }
     return 0;
   });
@@ -63,10 +65,16 @@ function Products() {
             </div>
           )}
 
-          <div className="flex items-center gap-2 text-sm sm:gap-5">
-            <span className="text-sm lg:text-base">Sort by:</span>
+          <div
+            className={`${searchProduct ? "flex-col gap-1" : "flex-row items-center gap-5"} flex sm:flex-row sm:items-center sm:gap-5`}
+          >
+            <span
+              className={`${searchProduct ? "text-xs" : "text-sm"} sm:text-sm lg:text-base`}
+            >
+              Sort by:
+            </span>
             <select
-              className="outlineStyle rounded-full border-2 border-stone-300 bg-white px-2 py-2 text-sm lg:text-base"
+              className="outlineStyle rounded-full border-2 border-stone-300 bg-white px-2 py-2 text-xs sm:text-sm lg:text-base"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
@@ -75,12 +83,13 @@ function Products() {
               </option>
               <option value="ascending">Prices low to high</option>
               <option value="descending">Prices high to low</option>
+              <option value="rating_descending">High ratings first</option>
             </select>
           </div>
         </header>
         {/* PRODUCTS */}
         <main
-          className={`${sortedProducts.length > 0 ? "grid grid-cols-2 gap-x-5 px-5 py-10 sm:grid-cols-3 md:gap-y-10 lg:grid-cols-4 xl:grid-cols-5" : "flex items-center justify-center"} container h-full`}
+          className={`${sortedProducts.length > 0 ? "grid grid-cols-2 gap-x-5 pb-10 pt-3 sm:grid-cols-3 md:gap-x-10 md:gap-y-14 lg:grid-cols-4 xl:grid-cols-5 xl:gap-5" : "flex items-center justify-center"} h-full`}
         >
           {sortedProducts.length > 0 ? (
             sortedProducts.map((item) => (
