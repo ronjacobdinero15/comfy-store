@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./ui/Error";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import AppLayout from "./ui/AppLayout";
+import AppLayout, { loader as productsLoader } from "./ui/AppLayout";
 import Products from "./pages/Products";
 import SelectedProduct from "./pages/SelectedProduct";
 
@@ -12,6 +12,7 @@ const router = createBrowserRouter([
     path: "/comfy-store/",
     element: <AppLayout />,
     errorElement: <Error />,
+    loader: productsLoader,
     children: [
       {
         path: "/comfy-store/",

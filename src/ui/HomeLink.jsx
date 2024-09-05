@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import hanger from "/hanger.svg";
+import hanger from "/assets/hanger.svg";
 
 function HomeLink() {
   return (

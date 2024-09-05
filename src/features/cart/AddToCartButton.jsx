@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import cart_light from "/cart_light.svg";
+import cart_light from "/assets/cart_light.svg";
 
 import { addToCart, toggleSidebar } from "./cartSlice";
 

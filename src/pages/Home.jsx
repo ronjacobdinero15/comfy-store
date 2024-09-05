@@ -1,24 +1,10 @@
-import { useEffect } from "react";
-
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 
-import bg_home from "/bg_home.jpg";
+import bg_home from "/assets/bg_home.jpg";
 
 import TopProducts from "../features/products/TopProducts.jsx";
-import {
-  fetchProducts,
-  getAllProducts,
-} from "../features/products/productsSlice.js";
 
 function Home() {
-  const dispatch = useDispatch();
-  const products = useSelector(getAllProducts);
-
-  useEffect(() => {
-    if (products.length === 0) dispatch(fetchProducts());
-  }, [products, dispatch]);
-
   return (
     <>
       <div className="relative h-screen w-full sm:h-dvh">

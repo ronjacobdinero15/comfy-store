@@ -1,19 +1,24 @@
 import { useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-import search from "/search.svg";
+import search from "/assets/search.svg";
 
 function SearchProduct({ showSearch }) {
-  const [searchProduct, setSearchProduct] = useState("");
+  const [searchQueryProduct, setSearchProduct] = useState("");
+  const { searchProduct } = useParams();
   const navigate = useNavigate();
 
   function handleSearchItem(e) {
     e.preventDefault();
 
-    const trimmedSearchProduct = searchProduct.toLowerCase().trim();
+    const trimmedSearchProduct = searchQueryProduct.toLowerCase().trim();
 
-    if (trimmedSearchProduct === "") return;
+    if (searchProduct === trimmedSearchProduct || trimmedSearchProduct === "") {
+      setSearchProduct("");
+      return;
+    }
+
     navigate(`/comfy-store/products/search/${trimmedSearchProduct}`);
     setSearchProduct("");
   }
@@ -25,7 +30,7 @@ function SearchProduct({ showSearch }) {
     >
       <input
         className="outlineStyle h-10 w-full rounded-full border-2 border-stone-300 px-2 py-1 pl-4 pr-20 transition-all duration-300"
-        value={searchProduct}
+        value={searchQueryProduct}
         onChange={(e) => setSearchProduct(e.target.value)}
       />
 

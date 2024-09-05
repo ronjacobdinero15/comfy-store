@@ -1,22 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import Product from "../features/products/Product";
-import {
-  fetchProducts,
-  getAllProducts,
-} from "../features/products/productsSlice";
+import { getAllProducts } from "../features/products/productsSlice";
 
 function Products() {
   const [sortBy, setSortBy] = useState("default");
   const products = useSelector(getAllProducts);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (products.length === 0) dispatch(fetchProducts());
-  }, [products, dispatch]);
 
   const { searchProduct, categoryType } = useParams();
 

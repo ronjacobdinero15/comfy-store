@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import forward from "/forward.svg";
+import forward from "/assets/forward.svg";
 
 import CartItem from "./CartItem";
 import {

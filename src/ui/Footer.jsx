@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import email from "/email.svg";
-import twitter from "/twitter.svg";
-import facebook from "/facebook.svg";
-import linkedin from "/linkedin.svg";
-import instagram from "/instagram.svg";
-import customer_service from "/customer_service.svg";
+import email from "/assets/email.svg";
+import twitter from "/assets/twitter.svg";
+import facebook from "/assets/facebook.svg";
+import linkedin from "/assets/linkedin.svg";
+import instagram from "/assets/instagram.svg";
+import customer_service from "/assets/customer_service.svg";
 
 function Footer() {
   return (

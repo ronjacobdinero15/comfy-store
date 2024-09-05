@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
-import back from "/back.svg";
-import store from "/store.svg";
-import search from "/search.svg";
+import back from "/assets/back.svg";
+import store from "/assets/store.svg";
+import search from "/assets/search.svg";
 
 import HomeLink from "./HomeLink";
 import CartLink from "../features/cart/CartLink";

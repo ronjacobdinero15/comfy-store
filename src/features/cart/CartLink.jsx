@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import cart from "/cart.svg";
+import cart from "/assets/cart.svg";
 
 import Sidebar from "./Sidebar";
 import { getCartQuantity, toggleSidebar } from "./cartSlice";

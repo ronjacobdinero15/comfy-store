@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
-import { getTopProducts } from "./productsSlice";
 import Product from "./Product";
+import { getTopProducts } from "./productsSlice";
 
 function TopProducts() {
   const topProducts = useSelector(getTopProducts);

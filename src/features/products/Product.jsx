@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import flash from "/flash.svg";
+import flash from "/assets/flash.svg";
 
 import ProductRating from "../../ui/ProductRating";
 import { applyDiscount } from "../../utils/helpers";

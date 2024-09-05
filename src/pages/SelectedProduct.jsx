@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import flash from "/flash.svg";
+import flash from "/assets/flash.svg";
 
 import ProductRating from "../ui/ProductRating";
 import { applyDiscount } from "../utils/helpers";
@@ -12,8 +12,9 @@ import { getSelectedProduct } from "../features/products/productsSlice";
 
 function SelectedProduct() {
   const { productId } = useParams();
-  const [productQuantity, setProductQuantity] = useState(1);
   const selectedProduct = useSelector(getSelectedProduct(parseInt(productId)));
+
+  const [productQuantity, setProductQuantity] = useState(1);
   const dispatch = useDispatch();
 
   function handleAddToCart() {

@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
+import store from "../store";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useSelector } from "react-redux";
 import Loader from "./Loader";
+import { fetchProducts } from "../features/products/productsSlice";
 
 function AppLayout() {
   const productsStatus = useSelector((state) => state.product.status);
@@ -22,6 +24,11 @@ function AppLayout() {
       </div>
     </div>
   );
+}
+
+export async function loader() {
+  await store.dispatch(fetchProducts());
+  return null;
 }
 
 export default AppLayout;
